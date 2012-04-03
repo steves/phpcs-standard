@@ -150,7 +150,7 @@ class Snap_Sniffs_NamingConventions_ValidVariableNameSniff extends PHP_CodeSniff
         } else {
             if (substr($varName, 0, 1) !== '_') {
                 $error = 'Private member variable "%s" must contain a leading underscore';
-                $phpcsFile->addError($error, $stackPtr, 'PrivateNoUnderscore', $errorData);
+                //$phpcsFile->addError($error, $stackPtr, 'PrivateNoUnderscore', $errorData);
                 return;
             }
         }
