@@ -243,13 +243,13 @@ class Snap_Sniffs_Functions_FunctionCallSignatureSniff implements PHP_CodeSniffe
 
         if ($tokens[($openBracket + 1)]['content'] !== $phpcsFile->eolChar) {
             $error = 'Opening parenthesis of a multi-line function call must be the last content on the line';
-            $phpcsFile->addError($error, $stackPtr, 'ContentAfterOpenBracket');
+            //$phpcsFile->addError($error, $stackPtr, 'ContentAfterOpenBracket');
         }
 
         $prev = $phpcsFile->findPrevious(T_WHITESPACE, ($closeBracket - 1), null, true);
         if ($tokens[$prev]['line'] === $tokens[$closeBracket]['line']) {
             $error = 'Closing parenthesis of a multi-line function call must be on a line by itself';
-            $phpcsFile->addError($error, $closeBracket, 'CloseBracketLine');
+            //$phpcsFile->addError($error, $closeBracket, 'CloseBracketLine');
         }
 
     }//end processMultiLineCall()
