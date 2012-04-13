@@ -2,7 +2,7 @@
 <ruleset name="Snap">
 	<description>The Snap Interactive coding standard.</description>
 
-	<rule ref="Generic">
+	<rule ref="Generic"><!-- run all of the Generic rules except these excludes -->
 
 		<!-- dos or unix EOL are allowed.
 			Do we need a new sniff for EOL consistency? -->
