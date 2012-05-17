@@ -286,11 +286,15 @@ class Snap_Sniffs_Commenting_FunctionCommentSniff implements PHP_CodeSniffer_Sni
             // Report missing return tag.
             if ($this->commentParser->getReturn() === null) {
                 $error = 'Missing @return tag in function comment';
-                $this->currentFile->addError($error, $commentEnd, 'MissingReturn');
+                //$this->currentFile->addError($error, $commentEnd, 'MissingReturn');
             } else if (trim($this->commentParser->getReturn()->getRawContent()) === '') {
                 $error    = '@return tag is empty in function comment';
                 $errorPos = ($commentStart + $this->commentParser->getReturn()->getLine());
                 $this->currentFile->addError($error, $errorPos, 'EmptyReturn');
+            } else if (trim($this->commentParser->getReturn()->getRawContent()) === 'void') {
+                $error    = '@return tag is void which is not allowed';
+                $errorPos = ($commentStart + $this->commentParser->getReturn()->getLine());
+                $this->currentFile->addError($error, $errorPos, 'VoidReturn');
             }
         }
 
