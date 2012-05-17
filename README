@@ -1,9 +1,11 @@
-These are files that can be used to check your PHP code using PHP CodeSniffer. Code will be checked for coding standards, formatting, PHPDoc blocks, silly mistakes and more.
+These are files that can be used to check your PHP code using PHP
+CodeSniffer.  Code will be checked for coding standards, formatting,
+PHPDoc blocks, silly mistakes and more.
 
 Developed under phpcs version 1.3.3.
 
-To install, clone this repo in a directory named "Snap" under the "Standards"
-folder of your phpcs installation.
+To install, clone this repo in a directory named "Snap" under the
+"Standards" folder of your phpcs installation.
 
 Editor integration
 ------------------
@@ -26,3 +28,6 @@ nmap <Leader>sn :call RunPhpcs()<cr>
 
 This will allow you to run phpcs with the results in a Quickfix list by
 entering the command :Phpcs or \sn (mnemonic: sniff).
+
+Alternatively you can try the Vim Syntastic plugin which will use phpcs
+automatically if it's in your PATH.
