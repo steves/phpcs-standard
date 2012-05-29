@@ -311,9 +311,6 @@ class Snap_Sniffs_Commenting_FileCommentSniff implements PHP_CodeSniffer_Sniff
                 }
             }
 
-            // Check the PHP Version.
-            $this->processPHPVersion($commentStart, $commentEnd, $long);
-
             // Check each tag.
             $this->processTags($commentStart, $commentEnd);
         }//end if
