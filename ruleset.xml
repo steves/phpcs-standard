@@ -43,7 +43,6 @@
 	<!-- good stuff from Squiz -->
 	<rule ref="Squiz.Arrays.ArrayBracketSpacing"/>
 	<rule ref="Squiz.Classes.LowercaseClassKeywords"/>
-	<rule ref="Squiz.Classes.SelfMemberReference"/>
 	<rule ref="Squiz.Commenting.FunctionCommentThrowTag"/>
 	<!-- we have too much code lacking spaces around (){} etc. 
 	<rule ref="Squiz.ControlStructures.ControlSignature"/>
