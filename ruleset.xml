@@ -8,6 +8,9 @@
 			Do we need a new sniff for EOL consistency? -->
 		<exclude name="Generic.Files.LineEndings"/>
 
+		<!-- TODOs are allowed -->
+		<exclude name="Generic.Commenting.Todo"/>
+
 		<exclude name="Generic.WhiteSpace.DisallowTabIndent"/>
 
 		<!-- This sniff enforces TRUE, FALSE and NULL in caps. Yech. -->
