@@ -4,8 +4,7 @@
 
 	<rule ref="Generic"><!-- run all of the Generic rules except these excludes -->
 
-		<!-- dos or unix EOL are allowed.
-			Do we need a new sniff for EOL consistency? -->
+		<!-- Once our codebase is converted to LF EOL remove this -->
 		<exclude name="Generic.Files.LineEndings"/>
 
 		<!-- TODOs are allowed -->
