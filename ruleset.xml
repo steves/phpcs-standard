@@ -17,8 +17,6 @@
 
 		<!-- Use K&R style -->
 		<exclude name="Generic.Functions.OpeningFunctionBraceBsdAllman"/>
-		<!-- but don't enforce spacing for now... -->
-		<exclude name="Generic.Functions.OpeningFunctionBraceKernighanRitchie"/>
 
 		<!-- Don't require pretty alignment in successive assignments -->
 		<exclude name="Generic.Formatting.MultipleStatementAlignment"/>
