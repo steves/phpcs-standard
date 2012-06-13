@@ -161,11 +161,6 @@ class Snap_Sniffs_Commenting_VariableCommentSniff extends PHP_CodeSniffer_Standa
                 $error = 'Variable comment short description must be on a single line';
                 $phpcsFile->addError($error, ($commentStart + 1), 'ShortSingleLine');
             }
-
-            if (preg_match('|[A-Z]|', $testShort[0]) === 0) {
-                $error = 'Variable comment short description must start with a capital letter';
-                $phpcsFile->addError($error, ($commentStart + 1), 'ShortNotCapital');
-            }
         }//end if
 
         // Exactly one blank line before tags.
