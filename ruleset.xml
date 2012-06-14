@@ -49,9 +49,6 @@
 	<rule ref="Squiz.ControlStructures.ForEachLoopDeclaration"/>
 	<rule ref="Squiz.ControlStructures.ForLoopDeclaration"/>
 	<rule ref="Squiz.ControlStructures.LowercaseDeclaration"/>
-	<!-- do not enforce default arg spacing for now
-	<rule ref="Squiz.Functions.FunctionDeclarationArgumentSpacing"/>
-	-->
 	<rule ref="Squiz.Functions.FunctionDeclaration"/>
 	<rule ref="Squiz.Functions.FunctionDuplicateArgument"/>
 	<rule ref="Squiz.Functions.LowercaseFunctionKeywords"/>
