@@ -10,9 +10,10 @@
 		<!-- TODOs are allowed -->
 		<exclude name="Generic.Commenting.Todo"/>
 
+		<!-- use tabs -->
 		<exclude name="Generic.WhiteSpace.DisallowTabIndent"/>
 
-		<!-- This sniff enforces TRUE, FALSE and NULL in caps. Yech. -->
+		<!-- Use lowercase true, false and null. -->
 		<exclude name="Generic.PHP.UpperCaseConstant"/>
 
 		<!-- Use K&R style -->
