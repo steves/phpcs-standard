@@ -22,8 +22,9 @@
 		<!-- Don't require pretty alignment in successive assignments -->
 		<exclude name="Generic.Formatting.MultipleStatementAlignment"/>
 
-		<!-- No space after cast operators (they are unary) -->
+		<!-- Allow space or no space after cast operators -->
 		<exclude name="Generic.Formatting.SpaceAfterCast"/>
+		<exclude name="Generic.Formatting.NoSpaceAfterCast"/>
 
 	</rule>
 
