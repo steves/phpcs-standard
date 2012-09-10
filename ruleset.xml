@@ -52,7 +52,9 @@
 	<rule ref="Squiz.Functions.FunctionDeclaration"/>
 	<rule ref="Squiz.Functions.FunctionDuplicateArgument"/>
 	<rule ref="Squiz.Functions.LowercaseFunctionKeywords"/>
-	<rule ref="Squiz.Operators.IncrementDecrementUsage"/>
+	<rule ref="Squiz.Operators.IncrementDecrementUsage">
+		<exclude name="Squiz.Operators.IncrementDecrementUsage.processAssignment"/>
+	</rule>
 	<rule ref="Squiz.Operators.ValidLogicalOperators"/>
 	<rule ref="Squiz.PHP.DisallowMultipleAssignments"/>
 	<rule ref="Squiz.PHP.DisallowSizeFunctionsInLoops"/>
