@@ -1,9 +1,7 @@
-These are files that can be used to check your PHP code using PHP
-CodeSniffer.  Code will be checked for coding standards, formatting,
-PHPDoc blocks, silly mistakes and more.
+These are files that can be used to check your PHP code using PHP CodeSniffer. Code will be checked for coding standards, formatting, PHPDoc blocks, silly mistakes and more.
 
-Developed under phpcs version 1.3.3.
-Seems fine so far also under 1.3.4.
+Developed under phpcs version 1.4.2.
+Seems fine so far also under 1.4.2.
 
 Installation
 ------------
@@ -39,20 +37,18 @@ VIM
 
 Add to your .vimrc:
 
-function! RunPhpcs()
-	let l:filename=@%
-	let l:phpcs_output=system('phpcs --report=csv '.l:filename)
-	let l:phpcs_list=split(l:phpcs_output, "\n")
-	unlet l:phpcs_list[0]
-	cexpr l:phpcs_list
-	cwindow
-endfunction
-set errorformat+=\"%f\"\\,%l\\,%c\\,%t%*[a-zA-Z]\\,\"%m\"\\,%*[a-zA-Z0-9_.-]\\,%*[0-9]
-command! Phpcs execute RunPhpcs()
-nmap <Leader>sn :call RunPhpcs()<cr>
+    function! RunPhpcs()
+        let l:filename=@%
+        let l:phpcs_output=system('phpcs --report=csv '.l:filename)
+        let l:phpcs_list=split(l:phpcs_output, "\n")
+        unlet l:phpcs_list[0]
+        cexpr l:phpcs_list
+        cwindow
+    endfunction
+    set errorformat+=\"%f\"\\,%l\\,%c\\,%t%*[a-zA-Z]\\,\"%m\"\\,%*[a-zA-Z0-9_.-]\\,%*[0-9]
+    command! Phpcs execute RunPhpcs()
+    nmap <Leader>sn :call RunPhpcs()<cr>
 
-This will allow you to run phpcs with the results in a Quickfix list by
-entering the command :Phpcs or \sn (mnemonic: sniff).
+This will allow you to run phpcs with the results in a Quickfix list by entering the command :Phpcs or \sn (mnemonic: sniff).
 
-Alternatively you can try the Vim Syntastic plugin which will use phpcs
-automatically if it's in your PATH.
+Alternatively you can try the Vim Syntastic plugin which will use phpcs automatically if it's in your PATH.
