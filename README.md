@@ -22,7 +22,7 @@ Installation
         cd /path/to/pear/PHP/CodeSniffer/Standards
         git clone git@github.com:SnapInteractive/phpcs-standard.git Snap
 
-4. Set Symfony2 as your default coding standard:
+4. Set Snap as your default coding standard:
 
         phpcs --config-set default_standard Snap
 
