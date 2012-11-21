@@ -3,7 +3,6 @@
 	<description>The Snap Interactive coding standard.</description>
 
 	<rule ref="Generic"><!-- run all of the Generic rules except these excludes -->
-
 		<!-- Once our codebase is converted to LF EOL remove this -->
 		<exclude name="Generic.Files.LineEndings"/>
 
@@ -26,13 +25,8 @@
 		<exclude name="Generic.Formatting.SpaceAfterCast"/>
 		<exclude name="Generic.Formatting.NoSpaceAfterCast"/>
 
-	</rule>
-
-	<rule ref="Generic.Files.LineLength">
-		<properties>
-			<property name="lineLimit" value="110"/>
-			<property name="absoluteLineLimit" value="0"/>
-		</properties>
+		<!-- We don't have a hard limit on line lengths -->
+		<exclude name="Generic.Files.LineLength" />
 	</rule>
 
 	<!-- with tab indents it's 1 tab per level -->
