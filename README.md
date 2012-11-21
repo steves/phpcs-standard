@@ -8,12 +8,29 @@ Seems fine so far also under 1.3.4.
 Installation
 ------------
 
-Clone this repo in a directory named "Snap" under the "Standards" folder
-of your phpcs installation. Change the default standard for phpcs to
-"Snap" by either editing CodeSniffer.conf directly or running the
-command:
+1. Install phpcs:
 
-phpcs --config-set default_standard Snap
+        pear install PHP_CodeSniffer
+
+2. Find your PEAR directory:
+
+        pear config-show | grep php_dir
+
+3. Copy, symlink or check out this repo to a folder called Snap inside the
+   phpcs `Standards` directory:
+
+        cd /path/to/pear/PHP/CodeSniffer/Standards
+        git clone git@github.com:SnapInteractive/phpcs-standard.git Snap
+
+4. Set Symfony2 as your default coding standard:
+
+        phpcs --config-set default_standard Snap
+
+5. Profit!
+
+        cd /path/to/my/project
+        phpcs
+        phpcs path/to/my/file.php
 
 Editor integration
 ------------------
