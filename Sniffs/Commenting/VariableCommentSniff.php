@@ -153,14 +153,6 @@ class Snap_Sniffs_Commenting_VariableCommentSniff extends PHP_CodeSniffer_Standa
                     $phpcsFile->addError($error, ($commentStart + $newlineCount), 'LongNotCapital');
                 }
             }//end if
-
-            // Short description must be single line and end with a full stop.
-            $testShort = trim($short);
-            $lastChar  = $testShort[(strlen($testShort) - 1)];
-            if (substr_count($testShort, $phpcsFile->eolChar) !== 0) {
-                $error = 'Variable comment short description must be on a single line';
-                $phpcsFile->addError($error, ($commentStart + 1), 'ShortSingleLine');
-            }
         }//end if
 
         // Exactly one blank line before tags.

@@ -103,7 +103,7 @@ class Snap_Sniffs_NamingConventions_ValidVariableNameSniff extends PHP_CodeSniff
             }//end if
         }//end if
 
-		if (preg_match(self::$underscore_var, $varName) === 0) {
+		if (preg_match(self::$underscore_var, $varName) === 0 && $tokens[$stackPtr - 1]['type'] != T_DOUBLE_COLON) {
             $error = 'Variable "%s" is not in valid underscore format';
             $phpcsFile->addError($error, $stackPtr, 'NotUnderscore', array($varName));
         }
@@ -155,7 +155,7 @@ class Snap_Sniffs_NamingConventions_ValidVariableNameSniff extends PHP_CodeSniff
             }
         }
 
-        if (preg_match(self::$underscore_var, $varName) === 0) {
+        if (preg_match(self::$underscore_var, $varName) === 0 && !$memberProps['is_static']) {
             $error = 'Variable "%s" is not in valid underscore format';
             $phpcsFile->addError($error, $stackPtr, 'MemberNotUnderscore', $errorData);
         }
